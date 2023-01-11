@@ -1,5 +1,7 @@
 from .base import *
-
+# DEBUG = True
+DEBUG = config('DEBUG')
+from .base import *
 THIRD_PARTY_APPS = ["debug_toolbar"]
 DEBUG = config("DEBUG")
 INSTALLED_APPS += THIRD_PARTY_APPS
@@ -11,8 +13,8 @@ DATABASES = {
     "default": {
     "ENGINE": "django.db.backends.sqlite3",
     "NAME": BASE_DIR / "db.sqlite3",
-    }
+ }
 }
 INTERNAL_IPS = [
-    "127.0.0.1", 
-    ]
+    "127.0.0.1",
+]
